@@ -12,19 +12,21 @@
 </head>
 
 <body>
-    <h1>
-        Movies
-    </h1>
-
-<div class="movie-list">
-
-    @foreach ($movies as $movie)
-        <div class="card">
-            <h2>{{ $movie }}</h2>
+    <div class="container">
+        <div class="movie-list">
+        
+            @foreach ($movies as $movie)
+                <div class="card">
+                    <h2>{{ $movie['title'] }}</h2>
+                    <h3>{{ $movie['original_title'] }}</h3>
+                    <h3>{{ $movie['nationality'] }}</h3>
+                    <h3>{{ $movie['date'] }}</h3>
+                    <h2>{{ $movie['vote'] }}</h2>
+                </div>
+            @endforeach
+    
         </div>
-    @endforeach
-
-</div>
+    </div>
 
 </body>
 

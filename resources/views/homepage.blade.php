@@ -1,3 +1,5 @@
+{{-- @dd($movies); --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,16 @@
     <h1>
         Movies
     </h1>
+
+<div class="movie-list">
+
+    @foreach ($movies as $movie)
+        <div class="card">
+            <h2>{{ $movie }}</h2>
+        </div>
+    @endforeach
+
+</div>
 
 </body>
 
